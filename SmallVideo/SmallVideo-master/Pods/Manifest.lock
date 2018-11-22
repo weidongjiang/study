@@ -1,0 +1,21 @@
+PODS:
+  - JoyTool (0.0.17):
+    - Masonry
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - JoyTool
+  - Masonry
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JoyTool
+    - Masonry
+
+SPEC CHECKSUMS:
+  JoyTool: aead76a56efdbbc496a54c15217fc286382b3e1d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: a801b1b8957e8d16ef6e5a80a9e6baa5e0f37b5e
+
+COCOAPODS: 1.5.3
