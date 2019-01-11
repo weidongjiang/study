@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2C920521E87D4500173DDE /* JWDVideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */; };
 		CEAE54AB21D0DFAA00054D67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */; };
 		CEAE54AE21D0DFAA00054D67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54AD21D0DFAA00054D67 /* ViewController.m */; };
 		CEAE54B121D0DFAA00054D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAE54AF21D0DFAA00054D67 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE2C920321E87D4500173DDE /* JWDVideoEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoEditViewController.h; sourceTree = "<group>"; };
+		CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoEditViewController.m; sourceTree = "<group>"; };
 		CEAE54A621D0DFAA00054D67 /* JWDVideoPlayEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWDVideoPlayEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAE54A921D0DFAA00054D67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE2C920221E87D2900173DDE /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				CE2C920321E87D4500173DDE /* JWDVideoEditViewController.h */,
+				CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		CEAE549D21D0DFAA00054D67 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 		CEAE54A821D0DFAA00054D67 /* JWDVideoPlayEdit */ = {
 			isa = PBXGroup;
 			children = (
+				CE2C920221E87D2900173DDE /* Video */,
 				CEAE54A921D0DFAA00054D67 /* AppDelegate.h */,
 				CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */,
 				CEAE54AC21D0DFAA00054D67 /* ViewController.h */,
@@ -262,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2C920521E87D4500173DDE /* JWDVideoEditViewController.m in Sources */,
 				CEAE54AE21D0DFAA00054D67 /* ViewController.m in Sources */,
 				CEAE54B921D0DFAD00054D67 /* main.m in Sources */,
 				CEAE54AB21D0DFAA00054D67 /* AppDelegate.m in Sources */,

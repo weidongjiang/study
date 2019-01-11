@@ -10,6 +10,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <CoreMedia/CoreMedia.h>
+#import "JWDVideoEditViewController.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -19,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 120, 50)];
     [button setTitle:@"选取编辑视频" forState:UIControlStateNormal];
@@ -39,6 +39,7 @@
     myImagePickerController.delegate = self;
     myImagePickerController.editing = NO;
     [self presentViewController:myImagePickerController animated:YES completion:nil];
+
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
@@ -46,11 +47,12 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 
     NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
-//    VideoEditVC *videoEditVC = [[VideoEditVC alloc] init];
-//    videoEditVC.videoUrl = url;
-//
-//    [self presentViewController:videoEditVC animated:YES completion:^{   }];
-    
+    JWDVideoEditViewController *editVC = [[JWDVideoEditViewController alloc] init];
+    editVC.editUrl = url.absoluteString;
+    [self presentViewController:editVC animated:YES completion:^{
+
+    }];
+
 }
 
 
