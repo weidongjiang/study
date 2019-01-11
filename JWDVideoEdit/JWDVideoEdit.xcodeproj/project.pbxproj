@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE1884EB21A7985000A3DD08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1884EA21A7985000A3DD08 /* AppDelegate.m */; };
+		CE1884EE21A7985000A3DD08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1884ED21A7985000A3DD08 /* ViewController.m */; };
+		CE1884F121A7985000A3DD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1884EF21A7985000A3DD08 /* Main.storyboard */; };
+		CE1884F321A7985200A3DD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1884F221A7985200A3DD08 /* Assets.xcassets */; };
+		CE1884F621A7985200A3DD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1884F421A7985200A3DD08 /* LaunchScreen.storyboard */; };
+		CE1884F921A7985200A3DD08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1884F821A7985200A3DD08 /* main.m */; };
+		CE18850321A7985200A3DD08 /* JWDVideoEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18850221A7985200A3DD08 /* JWDVideoEditTests.m */; };
+		CE18850E21A7985200A3DD08 /* JWDVideoEditUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18850D21A7985200A3DD08 /* JWDVideoEditUITests.m */; };
+		CE18852121A7994C00A3DD08 /* VideoEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18851D21A7994C00A3DD08 /* VideoEditVC.m */; };
+		CE18852221A7994C00A3DD08 /* drag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE18851E21A7994C00A3DD08 /* drag.jpg */; };
+		CE18852321A7994C00A3DD08 /* DragEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18851F21A7994C00A3DD08 /* DragEditView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE1884FF21A7985200A3DD08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE1884DE21A7985000A3DD08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE1884E521A7985000A3DD08;
+			remoteInfo = JWDVideoEdit;
+		};
+		CE18850A21A7985200A3DD08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE1884DE21A7985000A3DD08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE1884E521A7985000A3DD08;
+			remoteInfo = JWDVideoEdit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE1884E621A7985000A3DD08 /* JWDVideoEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWDVideoEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1884E921A7985000A3DD08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE1884EA21A7985000A3DD08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE1884EC21A7985000A3DD08 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE1884ED21A7985000A3DD08 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE1884F021A7985000A3DD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE1884F221A7985200A3DD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE1884F521A7985200A3DD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE1884F721A7985200A3DD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1884F821A7985200A3DD08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE1884FE21A7985200A3DD08 /* JWDVideoEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWDVideoEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE18850221A7985200A3DD08 /* JWDVideoEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoEditTests.m; sourceTree = "<group>"; };
+		CE18850421A7985200A3DD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE18850921A7985200A3DD08 /* JWDVideoEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWDVideoEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE18850D21A7985200A3DD08 /* JWDVideoEditUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoEditUITests.m; sourceTree = "<group>"; };
+		CE18850F21A7985200A3DD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE18851C21A7994C00A3DD08 /* DragEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragEditView.h; sourceTree = "<group>"; };
+		CE18851D21A7994C00A3DD08 /* VideoEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoEditVC.m; sourceTree = "<group>"; };
+		CE18851E21A7994C00A3DD08 /* drag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = drag.jpg; sourceTree = "<group>"; };
+		CE18851F21A7994C00A3DD08 /* DragEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragEditView.m; sourceTree = "<group>"; };
+		CE18852021A7994C00A3DD08 /* VideoEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoEditVC.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE1884E321A7985000A3DD08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1884FB21A7985200A3DD08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE18850621A7985200A3DD08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE1884DD21A7985000A3DD08 = {
+			isa = PBXGroup;
+			children = (
+				CE1884E821A7985000A3DD08 /* JWDVideoEdit */,
+				CE18850121A7985200A3DD08 /* JWDVideoEditTests */,
+				CE18850C21A7985200A3DD08 /* JWDVideoEditUITests */,
+				CE1884E721A7985000A3DD08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE1884E721A7985000A3DD08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE1884E621A7985000A3DD08 /* JWDVideoEdit.app */,
+				CE1884FE21A7985200A3DD08 /* JWDVideoEditTests.xctest */,
+				CE18850921A7985200A3DD08 /* JWDVideoEditUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE1884E821A7985000A3DD08 /* JWDVideoEdit */ = {
+			isa = PBXGroup;
+			children = (
+				CE18851B21A7994C00A3DD08 /* VideoEditTool */,
+				CE1884E921A7985000A3DD08 /* AppDelegate.h */,
+				CE1884EA21A7985000A3DD08 /* AppDelegate.m */,
+				CE1884EC21A7985000A3DD08 /* ViewController.h */,
+				CE1884ED21A7985000A3DD08 /* ViewController.m */,
+				CE1884EF21A7985000A3DD08 /* Main.storyboard */,
+				CE1884F221A7985200A3DD08 /* Assets.xcassets */,
+				CE1884F421A7985200A3DD08 /* LaunchScreen.storyboard */,
+				CE1884F721A7985200A3DD08 /* Info.plist */,
+				CE1884F821A7985200A3DD08 /* main.m */,
+			);
+			path = JWDVideoEdit;
+			sourceTree = "<group>";
+		};
+		CE18850121A7985200A3DD08 /* JWDVideoEditTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE18850221A7985200A3DD08 /* JWDVideoEditTests.m */,
+				CE18850421A7985200A3DD08 /* Info.plist */,
+			);
+			path = JWDVideoEditTests;
+			sourceTree = "<group>";
+		};
+		CE18850C21A7985200A3DD08 /* JWDVideoEditUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE18850D21A7985200A3DD08 /* JWDVideoEditUITests.m */,
+				CE18850F21A7985200A3DD08 /* Info.plist */,
+			);
+			path = JWDVideoEditUITests;
+			sourceTree = "<group>";
+		};
+		CE18851B21A7994C00A3DD08 /* VideoEditTool */ = {
+			isa = PBXGroup;
+			children = (
+				CE18851E21A7994C00A3DD08 /* drag.jpg */,
+				CE18851C21A7994C00A3DD08 /* DragEditView.h */,
+				CE18851F21A7994C00A3DD08 /* DragEditView.m */,
+				CE18852021A7994C00A3DD08 /* VideoEditVC.h */,
+				CE18851D21A7994C00A3DD08 /* VideoEditVC.m */,
+			);
+			path = VideoEditTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE1884E521A7985000A3DD08 /* JWDVideoEdit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE18851221A7985200A3DD08 /* Build configuration list for PBXNativeTarget "JWDVideoEdit" */;
+			buildPhases = (
+				CE1884E221A7985000A3DD08 /* Sources */,
+				CE1884E321A7985000A3DD08 /* Frameworks */,
+				CE1884E421A7985000A3DD08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWDVideoEdit;
+			productName = JWDVideoEdit;
+			productReference = CE1884E621A7985000A3DD08 /* JWDVideoEdit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE1884FD21A7985200A3DD08 /* JWDVideoEditTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE18851521A7985200A3DD08 /* Build configuration list for PBXNativeTarget "JWDVideoEditTests" */;
+			buildPhases = (
+				CE1884FA21A7985200A3DD08 /* Sources */,
+				CE1884FB21A7985200A3DD08 /* Frameworks */,
+				CE1884FC21A7985200A3DD08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE18850021A7985200A3DD08 /* PBXTargetDependency */,
+			);
+			name = JWDVideoEditTests;
+			productName = JWDVideoEditTests;
+			productReference = CE1884FE21A7985200A3DD08 /* JWDVideoEditTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE18850821A7985200A3DD08 /* JWDVideoEditUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE18851821A7985200A3DD08 /* Build configuration list for PBXNativeTarget "JWDVideoEditUITests" */;
+			buildPhases = (
+				CE18850521A7985200A3DD08 /* Sources */,
+				CE18850621A7985200A3DD08 /* Frameworks */,
+				CE18850721A7985200A3DD08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE18850B21A7985200A3DD08 /* PBXTargetDependency */,
+			);
+			name = JWDVideoEditUITests;
+			productName = JWDVideoEditUITests;
+			productReference = CE18850921A7985200A3DD08 /* JWDVideoEditUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE1884DE21A7985000A3DD08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = yixiajwd;
+				TargetAttributes = {
+					CE1884E521A7985000A3DD08 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CE1884FD21A7985200A3DD08 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CE1884E521A7985000A3DD08;
+					};
+					CE18850821A7985200A3DD08 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CE1884E521A7985000A3DD08;
+					};
+				};
+			};
+			buildConfigurationList = CE1884E121A7985000A3DD08 /* Build configuration list for PBXProject "JWDVideoEdit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE1884DD21A7985000A3DD08;
+			productRefGroup = CE1884E721A7985000A3DD08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE1884E521A7985000A3DD08 /* JWDVideoEdit */,
+				CE1884FD21A7985200A3DD08 /* JWDVideoEditTests */,
+				CE18850821A7985200A3DD08 /* JWDVideoEditUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE1884E421A7985000A3DD08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1884F621A7985200A3DD08 /* LaunchScreen.storyboard in Resources */,
+				CE18852221A7994C00A3DD08 /* drag.jpg in Resources */,
+				CE1884F321A7985200A3DD08 /* Assets.xcassets in Resources */,
+				CE1884F121A7985000A3DD08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1884FC21A7985200A3DD08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE18850721A7985200A3DD08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE1884E221A7985000A3DD08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1884EE21A7985000A3DD08 /* ViewController.m in Sources */,
+				CE1884F921A7985200A3DD08 /* main.m in Sources */,
+				CE18852121A7994C00A3DD08 /* VideoEditVC.m in Sources */,
+				CE1884EB21A7985000A3DD08 /* AppDelegate.m in Sources */,
+				CE18852321A7994C00A3DD08 /* DragEditView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1884FA21A7985200A3DD08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE18850321A7985200A3DD08 /* JWDVideoEditTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE18850521A7985200A3DD08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE18850E21A7985200A3DD08 /* JWDVideoEditUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE18850021A7985200A3DD08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE1884E521A7985000A3DD08 /* JWDVideoEdit */;
+			targetProxy = CE1884FF21A7985200A3DD08 /* PBXContainerItemProxy */;
+		};
+		CE18850B21A7985200A3DD08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE1884E521A7985000A3DD08 /* JWDVideoEdit */;
+			targetProxy = CE18850A21A7985200A3DD08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE1884EF21A7985000A3DD08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE1884F021A7985000A3DD08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE1884F421A7985200A3DD08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE1884F521A7985200A3DD08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE18851021A7985200A3DD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 英超 刁 (9R89X9BXEZ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE18851121A7985200A3DD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 英超 刁 (9R89X9BXEZ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE18851321A7985200A3DD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 英超 刁 (9R89X9BXEZ)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H97TRG8ALN;
+				INFOPLIST_FILE = JWDVideoEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YIXIA.YXLiveVideoApp.XKTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = YXLive;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE18851421A7985200A3DD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 英超 刁 (9R89X9BXEZ)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JWDVideoEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YIXIA.YXLiveVideoApp.XKTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE18851621A7985200A3DD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWDVideoEdit.app/JWDVideoEdit";
+			};
+			name = Debug;
+		};
+		CE18851721A7985200A3DD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWDVideoEdit.app/JWDVideoEdit";
+			};
+			name = Release;
+		};
+		CE18851921A7985200A3DD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JWDVideoEdit;
+			};
+			name = Debug;
+		};
+		CE18851A21A7985200A3DD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JWDVideoEdit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE1884E121A7985000A3DD08 /* Build configuration list for PBXProject "JWDVideoEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE18851021A7985200A3DD08 /* Debug */,
+				CE18851121A7985200A3DD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE18851221A7985200A3DD08 /* Build configuration list for PBXNativeTarget "JWDVideoEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE18851321A7985200A3DD08 /* Debug */,
+				CE18851421A7985200A3DD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE18851521A7985200A3DD08 /* Build configuration list for PBXNativeTarget "JWDVideoEditTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE18851621A7985200A3DD08 /* Debug */,
+				CE18851721A7985200A3DD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE18851821A7985200A3DD08 /* Build configuration list for PBXNativeTarget "JWDVideoEditUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE18851921A7985200A3DD08 /* Debug */,
+				CE18851A21A7985200A3DD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE1884DE21A7985000A3DD08 /* Project object */;
+}
