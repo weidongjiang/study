@@ -20,7 +20,7 @@
 @property (nonatomic, strong) AVPlayer            *player; ///< <#value#>
 @property (nonatomic, strong) AVPlayerLayer       *playerLayer; ///< <#value#>
 
-
+@property (nonatomic, strong) NSTimer             *repeatTimer; ///< 循环播放定时器
 
 @end
 
@@ -33,6 +33,7 @@
 
 - (void)dealloc {
     NSLog(@"JWDVideoEditViewController - dealloc");
+
 }
 
 - (instancetype)initWithVideoUrl:(NSURL *)videlUrl {
@@ -97,6 +98,7 @@
     [self.view.layer addSublayer:self.playerLayer];
 
 
+    [self addItemEndObserverForPlayerItem];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -128,11 +130,67 @@
 
 }
 
+- (void)addItemEndObserverForPlayerItem {
+
+
+    __weak typeof(self) weakSelf = self;
+    void (^callback)(NSNotification *note) = ^(NSNotification *notification) {
+        [weakSelf.player seekToTime:kCMTimeZero
+                  completionHandler:^(BOOL finished) {
+                      NSLog(@"播放完成");
+                      [weakSelf repeatPlay];
+                  }];
+    };
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:AVPlayerItemDidPlayToEndTimeNotification
+                                                      object:self.playerItem
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:callback];
+
+}
+
+
+#pragma mark  - 编辑区域循环播放
+- (void)repeatPlay {
+
+    [self.player play];
+    CMTime start = CMTimeMakeWithSeconds(0, self.player.currentTime.timescale);
+    [self.player seekToTime:start toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+}
+
 - (void)dismissCurrentVC {
     NSLog(@"dismissCurrentVC");
+    [self cleanAll];
     [self dismissViewControllerAnimated:YES completion:^{
 
     }];
+}
+
+- (void)cleanAll {
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self.playerItem];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    if (self.player) {
+        [self.player pause];
+        [self.player removeObserver:self forKeyPath:@"timeControlStatus"];
+        self.player = nil;
+    }
+
+    if (self.playerItem) {
+        [self.playerItem removeObserver:self forKeyPath:@"status"];
+        self.playerItem = nil;
+    }
+
+    if (self.playerLayer) {
+        self.playerLayer = nil;
+    }
+
+    if (self.repeatTimer) {
+        [self.repeatTimer invalidate];
+        self.repeatTimer = nil;
+    }
+
 }
 
 @end
