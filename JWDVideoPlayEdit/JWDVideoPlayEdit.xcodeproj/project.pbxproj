@@ -38,6 +38,7 @@
 /* Begin PBXFileReference section */
 		CE2C920321E87D4500173DDE /* JWDVideoEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoEditViewController.h; sourceTree = "<group>"; };
 		CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoEditViewController.m; sourceTree = "<group>"; };
+		CE2C920621E8833500173DDE /* JWDVideoDefaultConfign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoDefaultConfign.h; sourceTree = "<group>"; };
 		CEAE54A621D0DFAA00054D67 /* JWDVideoPlayEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWDVideoPlayEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAE54A921D0DFAA00054D67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 			children = (
 				CE2C920321E87D4500173DDE /* JWDVideoEditViewController.h */,
 				CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */,
+				CE2C920621E8833500173DDE /* JWDVideoDefaultConfign.h */,
 			);
 			path = Video;
 			sourceTree = "<group>";

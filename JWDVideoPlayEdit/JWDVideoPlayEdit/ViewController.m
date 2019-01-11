@@ -47,10 +47,8 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 
     NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
-    JWDVideoEditViewController *editVC = [[JWDVideoEditViewController alloc] init];
-    editVC.editUrl = url.absoluteString;
+    JWDVideoEditViewController *editVC = [[JWDVideoEditViewController alloc] initWithVideoUrl:url];
     [self presentViewController:editVC animated:YES completion:^{
-
     }];
 
 }

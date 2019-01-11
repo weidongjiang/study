@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JWDVideoEditViewController : UIViewController
 
-@property (nonatomic, strong) NSString        *editUrl; ///< 需要编辑的素材地址
+- (instancetype)initWithVideoUrl:(NSURL *)videlUrl;
 
 @end
 
