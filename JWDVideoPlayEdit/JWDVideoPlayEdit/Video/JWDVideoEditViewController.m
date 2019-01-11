@@ -29,9 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
 
-
-
+- (void)dealloc {
+    NSLog(@"JWDVideoEditViewController - dealloc");
 }
 
 - (instancetype)initWithVideoUrl:(NSURL *)videlUrl {
@@ -40,14 +41,6 @@
         [self initAll];
     }
     return self;
-}
-
-- (void)setDefaultData {
-
-    self.view.backgroundColor = [UIColor blackColor];
-
-
-
 }
 
 - (void)initAll {
@@ -59,9 +52,16 @@
     [self initPlayerWithVideoUrl:self.videlUrl];
 }
 
+- (void)setDefaultData {
+
+    self.view.backgroundColor = [UIColor blackColor];
+
+}
+
 - (void)initUI {
 
     UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 60, 50)];
+    [cancelBtn setBackgroundColor:[UIColor redColor]];
     [cancelBtn setTitle:@"返回" forState:UIControlStateNormal];
     [cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [cancelBtn addTarget:self action:@selector(dismissCurrentVC) forControlEvents:UIControlEventTouchUpInside];
@@ -74,6 +74,15 @@
 #pragma mark - 播放
 - (void)initPlayerWithVideoUrl:(NSURL *)videlUrl {
 
+    if (!videlUrl) {
+        return;
+    }
+
+    // 设置播放声音模式  在静音的时候也可以播放
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
+
+    // 播放器
     self.playerItem = [[AVPlayerItem alloc] initWithURL:videlUrl];
     [self.playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
 
@@ -83,8 +92,10 @@
     self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
     self.playerLayer.contentsScale = [UIScreen mainScreen].scale;
-    self.playerLayer.frame = CGRectMake(0, 80, self.view.bounds.size.width, K_SCREEN_WIDTH-160);
+    self.playerLayer.frame = CGRectMake(0, 80, self.view.bounds.size.width, K_SCREEN_HEIGHT-260);
+    self.playerLayer.backgroundColor = [UIColor yellowColor].CGColor;
     [self.view.layer addSublayer:self.playerLayer];
+
 
 }
 
@@ -117,8 +128,8 @@
 
 }
 
-
 - (void)dismissCurrentVC {
+    NSLog(@"dismissCurrentVC");
     [self dismissViewControllerAnimated:YES completion:^{
 
     }];
