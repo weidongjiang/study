@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEAE54AB21D0DFAA00054D67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */; };
+		CEAE54AE21D0DFAA00054D67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54AD21D0DFAA00054D67 /* ViewController.m */; };
+		CEAE54B121D0DFAA00054D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAE54AF21D0DFAA00054D67 /* Main.storyboard */; };
+		CEAE54B321D0DFAD00054D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAE54B221D0DFAD00054D67 /* Assets.xcassets */; };
+		CEAE54B621D0DFAD00054D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAE54B421D0DFAD00054D67 /* LaunchScreen.storyboard */; };
+		CEAE54B921D0DFAD00054D67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54B821D0DFAD00054D67 /* main.m */; };
+		CEAE54C321D0DFAD00054D67 /* JWDVideoPlayEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54C221D0DFAD00054D67 /* JWDVideoPlayEditTests.m */; };
+		CEAE54CE21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54CD21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEAE54BF21D0DFAD00054D67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEAE549E21D0DFAA00054D67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEAE54A521D0DFAA00054D67;
+			remoteInfo = JWDVideoPlayEdit;
+		};
+		CEAE54CA21D0DFAD00054D67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEAE549E21D0DFAA00054D67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEAE54A521D0DFAA00054D67;
+			remoteInfo = JWDVideoPlayEdit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEAE54A621D0DFAA00054D67 /* JWDVideoPlayEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWDVideoPlayEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAE54A921D0DFAA00054D67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEAE54AC21D0DFAA00054D67 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CEAE54AD21D0DFAA00054D67 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEAE54B021D0DFAA00054D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEAE54B221D0DFAD00054D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEAE54B521D0DFAD00054D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEAE54B721D0DFAD00054D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAE54B821D0DFAD00054D67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEAE54BE21D0DFAD00054D67 /* JWDVideoPlayEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWDVideoPlayEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAE54C221D0DFAD00054D67 /* JWDVideoPlayEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoPlayEditTests.m; sourceTree = "<group>"; };
+		CEAE54C421D0DFAD00054D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAE54C921D0DFAD00054D67 /* JWDVideoPlayEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWDVideoPlayEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAE54CD21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoPlayEditUITests.m; sourceTree = "<group>"; };
+		CEAE54CF21D0DFAD00054D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEAE54A321D0DFAA00054D67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAE54BB21D0DFAD00054D67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAE54C621D0DFAD00054D67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEAE549D21D0DFAA00054D67 = {
+			isa = PBXGroup;
+			children = (
+				CEAE54A821D0DFAA00054D67 /* JWDVideoPlayEdit */,
+				CEAE54C121D0DFAD00054D67 /* JWDVideoPlayEditTests */,
+				CEAE54CC21D0DFAD00054D67 /* JWDVideoPlayEditUITests */,
+				CEAE54A721D0DFAA00054D67 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEAE54A721D0DFAA00054D67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE54A621D0DFAA00054D67 /* JWDVideoPlayEdit.app */,
+				CEAE54BE21D0DFAD00054D67 /* JWDVideoPlayEditTests.xctest */,
+				CEAE54C921D0DFAD00054D67 /* JWDVideoPlayEditUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEAE54A821D0DFAA00054D67 /* JWDVideoPlayEdit */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE54A921D0DFAA00054D67 /* AppDelegate.h */,
+				CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */,
+				CEAE54AC21D0DFAA00054D67 /* ViewController.h */,
+				CEAE54AD21D0DFAA00054D67 /* ViewController.m */,
+				CEAE54AF21D0DFAA00054D67 /* Main.storyboard */,
+				CEAE54B221D0DFAD00054D67 /* Assets.xcassets */,
+				CEAE54B421D0DFAD00054D67 /* LaunchScreen.storyboard */,
+				CEAE54B721D0DFAD00054D67 /* Info.plist */,
+				CEAE54B821D0DFAD00054D67 /* main.m */,
+			);
+			path = JWDVideoPlayEdit;
+			sourceTree = "<group>";
+		};
+		CEAE54C121D0DFAD00054D67 /* JWDVideoPlayEditTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE54C221D0DFAD00054D67 /* JWDVideoPlayEditTests.m */,
+				CEAE54C421D0DFAD00054D67 /* Info.plist */,
+			);
+			path = JWDVideoPlayEditTests;
+			sourceTree = "<group>";
+		};
+		CEAE54CC21D0DFAD00054D67 /* JWDVideoPlayEditUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE54CD21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m */,
+				CEAE54CF21D0DFAD00054D67 /* Info.plist */,
+			);
+			path = JWDVideoPlayEditUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEAE54A521D0DFAA00054D67 /* JWDVideoPlayEdit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAE54D221D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEdit" */;
+			buildPhases = (
+				CEAE54A221D0DFAA00054D67 /* Sources */,
+				CEAE54A321D0DFAA00054D67 /* Frameworks */,
+				CEAE54A421D0DFAA00054D67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWDVideoPlayEdit;
+			productName = JWDVideoPlayEdit;
+			productReference = CEAE54A621D0DFAA00054D67 /* JWDVideoPlayEdit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEAE54BD21D0DFAD00054D67 /* JWDVideoPlayEditTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAE54D521D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEditTests" */;
+			buildPhases = (
+				CEAE54BA21D0DFAD00054D67 /* Sources */,
+				CEAE54BB21D0DFAD00054D67 /* Frameworks */,
+				CEAE54BC21D0DFAD00054D67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEAE54C021D0DFAD00054D67 /* PBXTargetDependency */,
+			);
+			name = JWDVideoPlayEditTests;
+			productName = JWDVideoPlayEditTests;
+			productReference = CEAE54BE21D0DFAD00054D67 /* JWDVideoPlayEditTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEAE54C821D0DFAD00054D67 /* JWDVideoPlayEditUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAE54D821D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEditUITests" */;
+			buildPhases = (
+				CEAE54C521D0DFAD00054D67 /* Sources */,
+				CEAE54C621D0DFAD00054D67 /* Frameworks */,
+				CEAE54C721D0DFAD00054D67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEAE54CB21D0DFAD00054D67 /* PBXTargetDependency */,
+			);
+			name = JWDVideoPlayEditUITests;
+			productName = JWDVideoPlayEditUITests;
+			productReference = CEAE54C921D0DFAD00054D67 /* JWDVideoPlayEditUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEAE549E21D0DFAA00054D67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = yixiajwd;
+				TargetAttributes = {
+					CEAE54A521D0DFAA00054D67 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CEAE54BD21D0DFAD00054D67 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CEAE54A521D0DFAA00054D67;
+					};
+					CEAE54C821D0DFAD00054D67 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CEAE54A521D0DFAA00054D67;
+					};
+				};
+			};
+			buildConfigurationList = CEAE54A121D0DFAA00054D67 /* Build configuration list for PBXProject "JWDVideoPlayEdit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEAE549D21D0DFAA00054D67;
+			productRefGroup = CEAE54A721D0DFAA00054D67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEAE54A521D0DFAA00054D67 /* JWDVideoPlayEdit */,
+				CEAE54BD21D0DFAD00054D67 /* JWDVideoPlayEditTests */,
+				CEAE54C821D0DFAD00054D67 /* JWDVideoPlayEditUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEAE54A421D0DFAA00054D67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAE54B621D0DFAD00054D67 /* LaunchScreen.storyboard in Resources */,
+				CEAE54B321D0DFAD00054D67 /* Assets.xcassets in Resources */,
+				CEAE54B121D0DFAA00054D67 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAE54BC21D0DFAD00054D67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAE54C721D0DFAD00054D67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEAE54A221D0DFAA00054D67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAE54AE21D0DFAA00054D67 /* ViewController.m in Sources */,
+				CEAE54B921D0DFAD00054D67 /* main.m in Sources */,
+				CEAE54AB21D0DFAA00054D67 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAE54BA21D0DFAD00054D67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAE54C321D0DFAD00054D67 /* JWDVideoPlayEditTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAE54C521D0DFAD00054D67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAE54CE21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEAE54C021D0DFAD00054D67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEAE54A521D0DFAA00054D67 /* JWDVideoPlayEdit */;
+			targetProxy = CEAE54BF21D0DFAD00054D67 /* PBXContainerItemProxy */;
+		};
+		CEAE54CB21D0DFAD00054D67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEAE54A521D0DFAA00054D67 /* JWDVideoPlayEdit */;
+			targetProxy = CEAE54CA21D0DFAD00054D67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEAE54AF21D0DFAA00054D67 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEAE54B021D0DFAA00054D67 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEAE54B421D0DFAD00054D67 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEAE54B521D0DFAD00054D67 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEAE54D021D0DFAD00054D67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEAE54D121D0DFAD00054D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEAE54D321D0DFAD00054D67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoPlayEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoPlayEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEAE54D421D0DFAD00054D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoPlayEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoPlayEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEAE54D621D0DFAD00054D67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoPlayEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoPlayEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWDVideoPlayEdit.app/JWDVideoPlayEdit";
+			};
+			name = Debug;
+		};
+		CEAE54D721D0DFAD00054D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoPlayEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoPlayEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWDVideoPlayEdit.app/JWDVideoPlayEdit";
+			};
+			name = Release;
+		};
+		CEAE54D921D0DFAD00054D67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoPlayEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoPlayEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JWDVideoPlayEdit;
+			};
+			name = Debug;
+		};
+		CEAE54DA21D0DFAD00054D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
+				INFOPLIST_FILE = JWDVideoPlayEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixia.JWDVideoPlayEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JWDVideoPlayEdit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEAE54A121D0DFAA00054D67 /* Build configuration list for PBXProject "JWDVideoPlayEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAE54D021D0DFAD00054D67 /* Debug */,
+				CEAE54D121D0DFAD00054D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAE54D221D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAE54D321D0DFAD00054D67 /* Debug */,
+				CEAE54D421D0DFAD00054D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAE54D521D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEditTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAE54D621D0DFAD00054D67 /* Debug */,
+				CEAE54D721D0DFAD00054D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAE54D821D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEditUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAE54D921D0DFAD00054D67 /* Debug */,
+				CEAE54DA21D0DFAD00054D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEAE549E21D0DFAA00054D67 /* Project object */;
+}
