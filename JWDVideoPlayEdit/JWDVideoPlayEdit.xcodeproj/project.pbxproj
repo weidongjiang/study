@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE2C920521E87D4500173DDE /* JWDVideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */; };
 		CE81756821E8AB1800FB3343 /* JWDVideoThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CE81756721E8AB1800FB3343 /* JWDVideoThumbnail.m */; };
+		CE81756B21E8AC6600FB3343 /* JWDVideoThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE81756A21E8AC6600FB3343 /* JWDVideoThumbnailView.m */; };
 		CEAE54AB21D0DFAA00054D67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */; };
 		CEAE54AE21D0DFAA00054D67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54AD21D0DFAA00054D67 /* ViewController.m */; };
 		CEAE54B121D0DFAA00054D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAE54AF21D0DFAA00054D67 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		CE2C920621E8833500173DDE /* JWDVideoDefaultConfign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoDefaultConfign.h; sourceTree = "<group>"; };
 		CE81756621E8AB1800FB3343 /* JWDVideoThumbnail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoThumbnail.h; sourceTree = "<group>"; };
 		CE81756721E8AB1800FB3343 /* JWDVideoThumbnail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoThumbnail.m; sourceTree = "<group>"; };
+		CE81756921E8AC6600FB3343 /* JWDVideoThumbnailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoThumbnailView.h; sourceTree = "<group>"; };
+		CE81756A21E8AC6600FB3343 /* JWDVideoThumbnailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoThumbnailView.m; sourceTree = "<group>"; };
 		CEAE54A621D0DFAA00054D67 /* JWDVideoPlayEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWDVideoPlayEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAE54A921D0DFAA00054D67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEAE54AA21D0DFAA00054D67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				CE2C920621E8833500173DDE /* JWDVideoDefaultConfign.h */,
 				CE81756621E8AB1800FB3343 /* JWDVideoThumbnail.h */,
 				CE81756721E8AB1800FB3343 /* JWDVideoThumbnail.m */,
+				CE81756921E8AC6600FB3343 /* JWDVideoThumbnailView.h */,
+				CE81756A21E8AC6600FB3343 /* JWDVideoThumbnailView.m */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				CE2C920521E87D4500173DDE /* JWDVideoEditViewController.m in Sources */,
 				CEAE54AE21D0DFAA00054D67 /* ViewController.m in Sources */,
 				CEAE54B921D0DFAD00054D67 /* main.m in Sources */,
+				CE81756B21E8AC6600FB3343 /* JWDVideoThumbnailView.m in Sources */,
 				CEAE54AB21D0DFAA00054D67 /* AppDelegate.m in Sources */,
 				CE81756821E8AB1800FB3343 /* JWDVideoThumbnail.m in Sources */,
 			);

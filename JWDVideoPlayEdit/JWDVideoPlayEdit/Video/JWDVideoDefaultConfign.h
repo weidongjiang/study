@@ -12,5 +12,6 @@
 #define K_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define K_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define K_thumbnailView_h 50
 
 #endif /* JWDVideoDefaultConfign_h */

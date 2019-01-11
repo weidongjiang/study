@@ -12,6 +12,8 @@
 
 #import "JWDVideoDefaultConfign.h"
 #import "JWDVideoThumbnail.h"
+#import "JWDVideoThumbnailView.h"
+
 
 @interface JWDVideoEditViewController ()
 
@@ -24,6 +26,8 @@
 
 @property (nonatomic, strong) NSTimer             *repeatTimer; ///< 循环播放定时器
 @property (strong, nonatomic) AVAssetImageGenerator *imageGenerator;
+
+@property (nonatomic, strong) JWDVideoThumbnailView *thumbnailView; ///< <#value#>
 
 @end
 
@@ -70,6 +74,10 @@
     [cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [cancelBtn addTarget:self action:@selector(dismissCurrentVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelBtn];
+
+
+    self.thumbnailView = [[JWDVideoThumbnailView alloc] initWithFrame:CGRectMake(0, K_SCREEN_HEIGHT - K_thumbnailView_h - K_thumbnailView_h, K_SCREEN_WIDTH, K_thumbnailView_h)];
+    [self.view addSubview:self.thumbnailView];
 
 }
 
@@ -209,6 +217,8 @@
 //                NSString *name = THThumbnailsGeneratedNotification;
 //                NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 //                [nc postNotificationName:name object:images];
+
+                [self.thumbnailView updateThumbnailView:images];
 
             });
         }
