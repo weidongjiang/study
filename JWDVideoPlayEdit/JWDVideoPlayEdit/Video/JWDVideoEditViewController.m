@@ -11,16 +11,19 @@
 #import <AVKit/AVKit.h>
 
 #import "JWDVideoDefaultConfign.h"
+#import "JWDVideoThumbnail.h"
 
 @interface JWDVideoEditViewController ()
 
 @property (nonatomic, strong) NSURL               *videlUrl; ///< <#value#>
 
+@property (nonatomic, strong) AVAsset             *asset; ///< <#value#>
 @property (nonatomic, strong) AVPlayerItem        *playerItem; ///< <#value#>
 @property (nonatomic, strong) AVPlayer            *player; ///< <#value#>
 @property (nonatomic, strong) AVPlayerLayer       *playerLayer; ///< <#value#>
 
 @property (nonatomic, strong) NSTimer             *repeatTimer; ///< 循环播放定时器
+@property (strong, nonatomic) AVAssetImageGenerator *imageGenerator;
 
 @end
 
@@ -83,8 +86,16 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [[AVAudioSession sharedInstance] setActive:YES error:nil];
 
+    self.asset = [AVAsset assetWithURL:videlUrl];
     // 播放器
-    self.playerItem = [[AVPlayerItem alloc] initWithURL:videlUrl];
+    NSArray *keys = @[
+                      @"tracks",
+                      @"duration",
+                      @"commonMetadata",
+                      @"availableMediaCharacteristicsWithMediaSelectionOptions"
+                      ];
+    self.playerItem = [AVPlayerItem playerItemWithAsset:self.asset
+                           automaticallyLoadedAssetKeys:keys];
     [self.playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
 
     self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
@@ -112,6 +123,8 @@
             case AVPlayerItemStatusReadyToPlay:
             {
                 [self.player play];
+
+                [self generateThumbnails];
             }
 
                 break;
@@ -149,6 +162,62 @@
 
 }
 
+- (void)generateThumbnails {
+
+    self.imageGenerator =
+    [AVAssetImageGenerator assetImageGeneratorWithAsset:self.asset];
+
+    // Generate the @2x equivalent
+    self.imageGenerator.maximumSize = CGSizeMake(200.0f, 0.0f);
+
+    CMTime duration = self.asset.duration;
+
+    NSMutableArray *times = [NSMutableArray array];
+    CMTimeValue increment = duration.value / 20;
+    CMTimeValue currentValue = 2.0 * duration.timescale;
+    while (currentValue <= duration.value) {
+        CMTime time = CMTimeMake(currentValue, duration.timescale);
+        [times addObject:[NSValue valueWithCMTime:time]];
+        currentValue += increment;
+    }
+
+    __block NSUInteger imageCount = times.count;
+    __block NSMutableArray *images = [NSMutableArray array];
+
+    AVAssetImageGeneratorCompletionHandler handler;
+
+    handler = ^(CMTime requestedTime,
+                CGImageRef imageRef,
+                CMTime actualTime,
+                AVAssetImageGeneratorResult result,
+                NSError *error) {
+
+        if (result == AVAssetImageGeneratorSucceeded) {
+            UIImage *image = [UIImage imageWithCGImage:imageRef];
+            id thumbnail =
+            [JWDVideoThumbnail thumbnailWithImage:image time:actualTime];
+            [images addObject:thumbnail];
+        } else {
+            NSLog(@"Error: %@", [error localizedDescription]);
+        }
+
+        // If the decremented image count is at 0, we're all done.
+        if (--imageCount == 0) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"images--%@",images);
+
+//                NSString *name = THThumbnailsGeneratedNotification;
+//                NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+//                [nc postNotificationName:name object:images];
+
+            });
+        }
+    };
+
+    [self.imageGenerator generateCGImagesAsynchronouslyForTimes:times
+                                              completionHandler:handler];
+}
+
 
 #pragma mark  - 编辑区域循环播放
 - (void)repeatPlay {
@@ -170,7 +239,7 @@
 
     [[NSNotificationCenter defaultCenter] removeObserver:self.playerItem];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
+
     if (self.player) {
         [self.player pause];
         [self.player removeObserver:self forKeyPath:@"timeControlStatus"];
