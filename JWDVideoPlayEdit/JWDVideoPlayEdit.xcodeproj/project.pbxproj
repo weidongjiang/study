@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68F9071438111416ADF370FF /* libPods-JWDVideoPlayEditTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E7D29AE69E1F26CABA46BC /* libPods-JWDVideoPlayEditTests.a */; };
+		9AE9C010EEB50384338601B9 /* libPods-JWDVideoPlayEdit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A1D2813714F7F3C67D941C /* libPods-JWDVideoPlayEdit.a */; };
+		CE073EFF21EC2E750057D586 /* JWDDragEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE073EFE21EC2E750057D586 /* JWDDragEditView.m */; };
 		CE2C920521E87D4500173DDE /* JWDVideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */; };
 		CE81756821E8AB1800FB3343 /* JWDVideoThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CE81756721E8AB1800FB3343 /* JWDVideoThumbnail.m */; };
 		CE81756B21E8AC6600FB3343 /* JWDVideoThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE81756A21E8AC6600FB3343 /* JWDVideoThumbnailView.m */; };
@@ -18,6 +21,7 @@
 		CEAE54B921D0DFAD00054D67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54B821D0DFAD00054D67 /* main.m */; };
 		CEAE54C321D0DFAD00054D67 /* JWDVideoPlayEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54C221D0DFAD00054D67 /* JWDVideoPlayEditTests.m */; };
 		CEAE54CE21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE54CD21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m */; };
+		FA653E537E40E0F77F787A2C /* libPods-JWDVideoPlayEditUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B14FD5B991F70706CDBC526B /* libPods-JWDVideoPlayEditUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		323BED637FF0D8EBE555AF16 /* Pods-JWDVideoPlayEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWDVideoPlayEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWDVideoPlayEdit/Pods-JWDVideoPlayEdit.debug.xcconfig"; sourceTree = "<group>"; };
+		626941DDFD79D457639DF17F /* Pods-JWDVideoPlayEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWDVideoPlayEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWDVideoPlayEdit/Pods-JWDVideoPlayEdit.release.xcconfig"; sourceTree = "<group>"; };
+		87E7D29AE69E1F26CABA46BC /* libPods-JWDVideoPlayEditTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWDVideoPlayEditTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A1D2813714F7F3C67D941C /* libPods-JWDVideoPlayEdit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWDVideoPlayEdit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		999037C66EB7DD870431F81A /* Pods-JWDVideoPlayEditTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWDVideoPlayEditTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWDVideoPlayEditTests/Pods-JWDVideoPlayEditTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B14FD5B991F70706CDBC526B /* libPods-JWDVideoPlayEditUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWDVideoPlayEditUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34F918B64890012E60E3760 /* Pods-JWDVideoPlayEditUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWDVideoPlayEditUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWDVideoPlayEditUITests/Pods-JWDVideoPlayEditUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B845C11164F15AC96CE5F785 /* Pods-JWDVideoPlayEditTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWDVideoPlayEditTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWDVideoPlayEditTests/Pods-JWDVideoPlayEditTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE073EFD21EC2E750057D586 /* JWDDragEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDDragEditView.h; sourceTree = "<group>"; };
+		CE073EFE21EC2E750057D586 /* JWDDragEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDDragEditView.m; sourceTree = "<group>"; };
 		CE2C920321E87D4500173DDE /* JWDVideoEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoEditViewController.h; sourceTree = "<group>"; };
 		CE2C920421E87D4500173DDE /* JWDVideoEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoEditViewController.m; sourceTree = "<group>"; };
 		CE2C920621E8833500173DDE /* JWDVideoDefaultConfign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDVideoDefaultConfign.h; sourceTree = "<group>"; };
@@ -61,6 +75,7 @@
 		CEAE54C921D0DFAD00054D67 /* JWDVideoPlayEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWDVideoPlayEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAE54CD21D0DFAD00054D67 /* JWDVideoPlayEditUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDVideoPlayEditUITests.m; sourceTree = "<group>"; };
 		CEAE54CF21D0DFAD00054D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D871AB41531262F1F860BE31 /* Pods-JWDVideoPlayEditUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWDVideoPlayEditUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWDVideoPlayEditUITests/Pods-JWDVideoPlayEditUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE9C010EEB50384338601B9 /* libPods-JWDVideoPlayEdit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F9071438111416ADF370FF /* libPods-JWDVideoPlayEditTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +99,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA653E537E40E0F77F787A2C /* libPods-JWDVideoPlayEditUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		223BAA107D64E9A189B3B6E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95A1D2813714F7F3C67D941C /* libPods-JWDVideoPlayEdit.a */,
+				87E7D29AE69E1F26CABA46BC /* libPods-JWDVideoPlayEditTests.a */,
+				B14FD5B991F70706CDBC526B /* libPods-JWDVideoPlayEditUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7764F9F5F5AC6113C38F3AD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				323BED637FF0D8EBE555AF16 /* Pods-JWDVideoPlayEdit.debug.xcconfig */,
+				626941DDFD79D457639DF17F /* Pods-JWDVideoPlayEdit.release.xcconfig */,
+				999037C66EB7DD870431F81A /* Pods-JWDVideoPlayEditTests.debug.xcconfig */,
+				B845C11164F15AC96CE5F785 /* Pods-JWDVideoPlayEditTests.release.xcconfig */,
+				D871AB41531262F1F860BE31 /* Pods-JWDVideoPlayEditUITests.debug.xcconfig */,
+				B34F918B64890012E60E3760 /* Pods-JWDVideoPlayEditUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE2C920221E87D2900173DDE /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +139,8 @@
 				CE81756721E8AB1800FB3343 /* JWDVideoThumbnail.m */,
 				CE81756921E8AC6600FB3343 /* JWDVideoThumbnailView.h */,
 				CE81756A21E8AC6600FB3343 /* JWDVideoThumbnailView.m */,
+				CE073EFD21EC2E750057D586 /* JWDDragEditView.h */,
+				CE073EFE21EC2E750057D586 /* JWDDragEditView.m */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -109,6 +152,8 @@
 				CEAE54C121D0DFAD00054D67 /* JWDVideoPlayEditTests */,
 				CEAE54CC21D0DFAD00054D67 /* JWDVideoPlayEditUITests */,
 				CEAE54A721D0DFAA00054D67 /* Products */,
+				7764F9F5F5AC6113C38F3AD8 /* Pods */,
+				223BAA107D64E9A189B3B6E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAE54D221D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEdit" */;
 			buildPhases = (
+				33251F61FD746594430A74A8 /* [CP] Check Pods Manifest.lock */,
 				CEAE54A221D0DFAA00054D67 /* Sources */,
 				CEAE54A321D0DFAA00054D67 /* Frameworks */,
 				CEAE54A421D0DFAA00054D67 /* Resources */,
@@ -181,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAE54D521D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEditTests" */;
 			buildPhases = (
+				78C1885C7C94277937B09D3B /* [CP] Check Pods Manifest.lock */,
 				CEAE54BA21D0DFAD00054D67 /* Sources */,
 				CEAE54BB21D0DFAD00054D67 /* Frameworks */,
 				CEAE54BC21D0DFAD00054D67 /* Resources */,
@@ -199,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAE54D821D0DFAD00054D67 /* Build configuration list for PBXNativeTarget "JWDVideoPlayEditUITests" */;
 			buildPhases = (
+				5251E003EAF30DD27811E01D /* [CP] Check Pods Manifest.lock */,
 				CEAE54C521D0DFAD00054D67 /* Sources */,
 				CEAE54C621D0DFAD00054D67 /* Frameworks */,
 				CEAE54C721D0DFAD00054D67 /* Resources */,
@@ -282,11 +330,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33251F61FD746594430A74A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWDVideoPlayEdit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5251E003EAF30DD27811E01D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWDVideoPlayEditUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78C1885C7C94277937B09D3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWDVideoPlayEditTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEAE54A221D0DFAA00054D67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE073EFF21EC2E750057D586 /* JWDDragEditView.m in Sources */,
 				CE2C920521E87D4500173DDE /* JWDVideoEditViewController.m in Sources */,
 				CEAE54AE21D0DFAA00054D67 /* ViewController.m in Sources */,
 				CEAE54B921D0DFAD00054D67 /* main.m in Sources */,
@@ -461,6 +567,7 @@
 		};
 		CEAE54D321D0DFAD00054D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323BED637FF0D8EBE555AF16 /* Pods-JWDVideoPlayEdit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -481,6 +588,7 @@
 		};
 		CEAE54D421D0DFAD00054D67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 626941DDFD79D457639DF17F /* Pods-JWDVideoPlayEdit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -501,6 +609,7 @@
 		};
 		CEAE54D621D0DFAD00054D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999037C66EB7DD870431F81A /* Pods-JWDVideoPlayEditTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +629,7 @@
 		};
 		CEAE54D721D0DFAD00054D67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B845C11164F15AC96CE5F785 /* Pods-JWDVideoPlayEditTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +649,7 @@
 		};
 		CEAE54D921D0DFAD00054D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D871AB41531262F1F860BE31 /* Pods-JWDVideoPlayEditUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZPP94SLYH;
@@ -557,6 +668,7 @@
 		};
 		CEAE54DA21D0DFAD00054D67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34F918B64890012E60E3760 /* Pods-JWDVideoPlayEditUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZPP94SLYH;

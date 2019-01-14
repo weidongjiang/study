@@ -211,6 +211,7 @@
                     bottomBorder.frame = CGRectMake(self.boderX, 50-2, self.boderWidth+=deltaX/2, 2);
                     self.endPointX = point.x;
                 }
+
                 CMTime startTime = CMTimeMakeWithSeconds((point.x+editScrollView.contentOffset.x)/self.IMG_Width, self.player.currentTime.timescale);
                 
                 // 只有视频播放的时候才能够快进和快退1秒以内

@@ -15,7 +15,7 @@
 #import "JWDVideoThumbnailView.h"
 
 
-@interface JWDVideoEditViewController ()
+@interface JWDVideoEditViewController ()<JWDVideoThumbnailViewDelegate>
 
 @property (nonatomic, strong) NSURL               *videlUrl; ///< <#value#>
 
@@ -28,6 +28,8 @@
 @property (strong, nonatomic) AVAssetImageGenerator *imageGenerator;
 
 @property (nonatomic, strong) JWDVideoThumbnailView *thumbnailView; ///< <#value#>
+@property (nonatomic, assign) CGFloat             startTimeSeconds; ///< <#value#>
+@property (nonatomic, assign) CGFloat             endTime; ///< <#value#>
 
 @end
 
@@ -77,6 +79,7 @@
 
 
     self.thumbnailView = [[JWDVideoThumbnailView alloc] initWithFrame:CGRectMake(0, K_SCREEN_HEIGHT - K_thumbnailView_h - K_thumbnailView_h, K_SCREEN_WIDTH, K_thumbnailView_h)];
+    self.thumbnailView.delegate = self;
     [self.view addSubview:self.thumbnailView];
 
 }
@@ -153,10 +156,12 @@
 
 - (void)addItemEndObserverForPlayerItem {
 
+    CMTime start = CMTimeMakeWithSeconds(self.startTimeSeconds, self.player.currentTime.timescale);
+
 
     __weak typeof(self) weakSelf = self;
     void (^callback)(NSNotification *note) = ^(NSNotification *notification) {
-        [weakSelf.player seekToTime:kCMTimeZero
+        [weakSelf.player seekToTime:start
                   completionHandler:^(BOOL finished) {
                       NSLog(@"播放完成");
                       [weakSelf repeatPlay];
@@ -167,6 +172,14 @@
                                                       object:self.playerItem
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:callback];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:AVPlayerItemPlaybackStalledNotification
+                                                      object:self.playerItem
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification * _Nonnull note) {
+                                                      NSLog(@"AVPlayerItemPlaybackStalledNotification----");
+    }];
+
 
 }
 
@@ -228,12 +241,30 @@
                                               completionHandler:handler];
 }
 
+#pragma mark -
+#pragma mark - JWDVideoThumbnailViewDelegate
+- (void)stopOrStartPaly:(BOOL)isPlay {
+    if (isPlay) {
+        [self repeatPlay];
+    }else {
+        [self.player pause];
+    }
+}
+
+- (void)moveDragEditViewStartTimeSeconds:(CGFloat)startTimeSeconds {
+    self.startTimeSeconds = startTimeSeconds;
+}
+
+- (void)startEndTime:(CGFloat)endTime {
+    self.endTime = endTime;
+}
 
 #pragma mark  - 编辑区域循环播放
 - (void)repeatPlay {
 
     [self.player play];
-    CMTime start = CMTimeMakeWithSeconds(0, self.player.currentTime.timescale);
+    CMTime start = CMTimeMakeWithSeconds(self.startTimeSeconds, self.player.currentTime.timescale);
+
     [self.player seekToTime:start toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
 }
 
