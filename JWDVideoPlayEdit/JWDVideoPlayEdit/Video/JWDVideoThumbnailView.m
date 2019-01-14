@@ -36,6 +36,7 @@
 
 @property (nonatomic, assign) BOOL            isPanLeftOrRightDraggingView; ///< 是否在移动标签上滑动 yes在
 
+@property (nonatomic, strong) NSTimer         *repeatTimer; ///< <#value#>
 
 @end
 
@@ -149,9 +150,11 @@
                 self.isDraggingRightOverlayView = YES;
                 self.isDraggingLeftOverlayView = NO;
 
-                if (self.delegate && [self.delegate respondsToSelector:@selector(stopOrStartPaly:)]) {
-                    [self.delegate stopOrStartPaly:NO];
+                if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
+                    [self.delegate videoThumbnailViewStopOrStartPaly:NO];
                 }
+
+                [self repeatTimerInvalidate];
             }
 
             if (isLeft){
@@ -159,9 +162,10 @@
                 self.isDraggingRightOverlayView = NO;
                 self.isDraggingLeftOverlayView = YES;
 
-                if (self.delegate && [self.delegate respondsToSelector:@selector(stopOrStartPaly:)]) {
-                    [self.delegate stopOrStartPaly:NO];
+                if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
+                    [self.delegate videoThumbnailViewStopOrStartPaly:NO];
                 }
+                [self repeatTimerInvalidate];
             }
 
         }
@@ -191,12 +195,12 @@
                 }
 
                 CGFloat startTimeSeconds = (point.x+self.scrollView.contentOffset.x)/self.IMG_Width;
-                if (self.delegate && [self.delegate respondsToSelector:@selector(moveDragEditViewStartTimeSeconds:)]) {
-                    [self.delegate moveDragEditViewStartTimeSeconds:startTimeSeconds];
+                if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewMoveDragEditViewStartTimeSeconds:)]) {
+                    [self.delegate videoThumbnailViewMoveDragEditViewStartTimeSeconds:startTimeSeconds];
                 }
 
-                if (self.delegate && [self.delegate respondsToSelector:@selector(startEndTime:)]) {
-                    [self.delegate startEndTime:self.endTime];
+                if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStartEndTime:)]) {
+                    [self.delegate videoThumbnailViewStartEndTime:self.endTime];
                 }
             }else if (self.isDraggingLeftOverlayView) {// 移动左边
                 NSLog(@"向左移动");
@@ -222,12 +226,12 @@
 
                 CGFloat startTimeSeconds = (point.x+self.scrollView.contentOffset.x)/self.IMG_Width;
 
-                if (self.delegate && [self.delegate respondsToSelector:@selector(moveDragEditViewStartTimeSeconds:)]) {
-                    [self.delegate moveDragEditViewStartTimeSeconds:startTimeSeconds];
+                if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewMoveDragEditViewStartTimeSeconds:)]) {
+                    [self.delegate videoThumbnailViewMoveDragEditViewStartTimeSeconds:startTimeSeconds];
                 }
 
-                if (self.delegate && [self.delegate respondsToSelector:@selector(startEndTime:)]) {
-                    [self.delegate startEndTime:self.endTime];
+                if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStartEndTime:)]) {
+                    [self.delegate videoThumbnailViewStartEndTime:self.endTime];
                 }
 
             }else {
@@ -242,8 +246,8 @@
             if (self.isPanLeftOrRightDraggingView) {
                 return;
             }
-            if (self.delegate && [self.delegate respondsToSelector:@selector(stopOrStartPaly:)]) {
-                [self.delegate stopOrStartPaly:YES];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
+                [self.delegate videoThumbnailViewStopOrStartPaly:YES];
             }
         }
             break;
@@ -256,14 +260,15 @@
 
 #pragma mark  - UIScrollViewDelegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(stopOrStartPaly:)]) {
-        [self.delegate stopOrStartPaly:NO];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
+        [self.delegate videoThumbnailViewStopOrStartPaly:NO];
     }
+    [self repeatTimerInvalidate];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(stopOrStartPaly:)]) {
-        [self.delegate stopOrStartPaly:NO];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
+        [self.delegate videoThumbnailViewStopOrStartPaly:YES];
     }
 }
 
@@ -281,6 +286,7 @@
     //         [self.playItem stepByCount:step];
     //    }
 }
+
 - (void)letScrollViewScrollAndResetPlayerStartTime {
 
     CGFloat offsetX = self.scrollView.contentOffset.x;
@@ -294,30 +300,58 @@
 //        startTime = CMTimeMakeWithSeconds((offsetX+self.startPointX)/self.IMG_Width, self.player.currentTime.timescale);
 
         CGFloat startTimeSeconds = (offsetX+self.startPointX)/self.IMG_Width;
-        if (self.delegate && [self.delegate respondsToSelector:@selector(moveDragEditViewStartTimeSeconds:)]) {
-            [self.delegate moveDragEditViewStartTimeSeconds:startTimeSeconds];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewMoveDragEditViewStartTimeSeconds:)]) {
+            [self.delegate videoThumbnailViewMoveDragEditViewStartTimeSeconds:startTimeSeconds];
         }
 
     }else {
 
 
         CGFloat startTimeSeconds = self.startPointX;
-        if (self.delegate && [self.delegate respondsToSelector:@selector(moveDragEditViewStartTimeSeconds:)]) {
-            [self.delegate moveDragEditViewStartTimeSeconds:startTimeSeconds];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewMoveDragEditViewStartTimeSeconds:)]) {
+            [self.delegate videoThumbnailViewMoveDragEditViewStartTimeSeconds:startTimeSeconds];
         }
     }
 
-    if (self.delegate && [self.delegate respondsToSelector:@selector(startEndTime:)]) {
-        [self.delegate startEndTime:self.endTime];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStartEndTime:)]) {
+        [self.delegate videoThumbnailViewStartEndTime:self.endTime];
     }
 
     // 只有视频播放的时候才能够快进和快退1秒以内
 //    [self.player seekToTime:startTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
 
-    if (self.delegate && [self.delegate respondsToSelector:@selector(stopOrStartPaly:)]) {
-        [self.delegate stopOrStartPaly:YES];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
+        [self.delegate videoThumbnailViewStopOrStartPaly:YES];
     }
 
 }
 
+- (void)videoThumbnailViewStartTimer {
+
+    [self repeatTimerInvalidate];
+
+    double duarationTime = (self.endPointX-self.startPointX-20)/K_SCREEN_WIDTH*10;
+
+//    line.hidden = NO;
+//    self.linePositionX = self.startPointX+10;
+//    self.lineMoveTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(lineMove) userInfo:nil repeats:YES];
+
+    // 开启循环播放
+    self.repeatTimer = [NSTimer scheduledTimerWithTimeInterval:duarationTime target:self selector:@selector(repeatPlay) userInfo:nil repeats:YES];
+    [self.repeatTimer fire];
+}
+
+- (void)repeatPlay {
+    NSLog(@"repeatPlay----循环");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewRepeatPlay)]) {
+        [self.delegate videoThumbnailViewRepeatPlay];
+    }
+}
+
+- (void)repeatTimerInvalidate {
+    if (self.repeatTimer) {
+        [self.repeatTimer invalidate];
+        self.repeatTimer = nil;
+    }
+}
 @end

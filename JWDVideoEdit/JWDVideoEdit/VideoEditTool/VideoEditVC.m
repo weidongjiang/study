@@ -390,6 +390,7 @@
 
 #pragma mark  - 开启计时器
 - (void)startTimer {
+
     double duarationTime = (self.endPointX-self.startPointX-20)/SCREEN_WIDTH*10;
     line.hidden = NO;
     self.linePositionX = self.startPointX+10;

@@ -12,10 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol JWDVideoThumbnailViewDelegate <NSObject>
 
-- (void)moveDragEditViewStartTimeSeconds:(CGFloat)startTimeSeconds;
-- (void)stopOrStartPaly:(BOOL)isPlay;
+- (void)videoThumbnailViewMoveDragEditViewStartTimeSeconds:(CGFloat)startTimeSeconds;
+- (void)videoThumbnailViewStopOrStartPaly:(BOOL)isPlay;
 
-- (void)startEndTime:(CGFloat)endTime;
+- (void)videoThumbnailViewStartEndTime:(CGFloat)endTime;
+- (void)videoThumbnailViewRepeatPlay;
 
 @end
 
@@ -26,6 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)updateThumbnailView:(NSArray *)thumbnails;
+
+- (void)videoThumbnailViewStartTimer;
+
+- (void)videoThumbnailViewRepeatTimerInvalidate;
 
 @end
 

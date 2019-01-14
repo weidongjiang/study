@@ -120,7 +120,7 @@
     [self.view.layer addSublayer:self.playerLayer];
 
 
-    [self addItemEndObserverForPlayerItem];
+//    [self addItemEndObserverForPlayerItem];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -136,6 +136,8 @@
                 [self.player play];
 
                 [self generateThumbnails];
+
+                [self.thumbnailView videoThumbnailViewStartTimer];
             }
 
                 break;
@@ -172,14 +174,6 @@
                                                       object:self.playerItem
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:callback];
-
-    [[NSNotificationCenter defaultCenter] addObserverForName:AVPlayerItemPlaybackStalledNotification
-                                                      object:self.playerItem
-                                                       queue:[NSOperationQueue mainQueue]
-                                                  usingBlock:^(NSNotification * _Nonnull note) {
-                                                      NSLog(@"AVPlayerItemPlaybackStalledNotification----");
-    }];
-
 
 }
 
@@ -243,7 +237,7 @@
 
 #pragma mark -
 #pragma mark - JWDVideoThumbnailViewDelegate
-- (void)stopOrStartPaly:(BOOL)isPlay {
+- (void)videoThumbnailViewStopOrStartPaly:(BOOL)isPlay {
     if (isPlay) {
         [self repeatPlay];
     }else {
@@ -251,12 +245,16 @@
     }
 }
 
-- (void)moveDragEditViewStartTimeSeconds:(CGFloat)startTimeSeconds {
+- (void)videoThumbnailViewMoveDragEditViewStartTimeSeconds:(CGFloat)startTimeSeconds {
     self.startTimeSeconds = startTimeSeconds;
 }
 
-- (void)startEndTime:(CGFloat)endTime {
+- (void)videoThumbnailViewStartEndTime:(CGFloat)endTime {
     self.endTime = endTime;
+}
+
+- (void)videoThumbnailViewRepeatPlay {
+    [self repeatPlay];
 }
 
 #pragma mark  - 编辑区域循环播放
@@ -264,7 +262,6 @@
 
     [self.player play];
     CMTime start = CMTimeMakeWithSeconds(self.startTimeSeconds, self.player.currentTime.timescale);
-
     [self.player seekToTime:start toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
 }
 
