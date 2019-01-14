@@ -409,7 +409,8 @@
 }
 
 #pragma mark  - 播放条移动
-- (void)lineMove{
+- (void)lineMove {
+
     double duarationTime = (self.endPointX-self.startPointX-20)/SCREEN_WIDTH*10;
     self.linePositionX += 0.01*(self.endPointX - self.startPointX-20)/duarationTime;
     

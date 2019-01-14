@@ -118,9 +118,6 @@
     self.playerLayer.frame = CGRectMake(0, 80, self.view.bounds.size.width, K_SCREEN_HEIGHT-260);
     self.playerLayer.backgroundColor = [UIColor yellowColor].CGColor;
     [self.view.layer addSublayer:self.playerLayer];
-
-
-//    [self addItemEndObserverForPlayerItem];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -156,26 +153,6 @@
 
 }
 
-- (void)addItemEndObserverForPlayerItem {
-
-    CMTime start = CMTimeMakeWithSeconds(self.startTimeSeconds, self.player.currentTime.timescale);
-
-
-    __weak typeof(self) weakSelf = self;
-    void (^callback)(NSNotification *note) = ^(NSNotification *notification) {
-        [weakSelf.player seekToTime:start
-                  completionHandler:^(BOOL finished) {
-                      NSLog(@"播放完成");
-                      [weakSelf repeatPlay];
-                  }];
-    };
-
-    [[NSNotificationCenter defaultCenter] addObserverForName:AVPlayerItemDidPlayToEndTimeNotification
-                                                      object:self.playerItem
-                                                       queue:[NSOperationQueue mainQueue]
-                                                  usingBlock:callback];
-
-}
 
 - (void)generateThumbnails {
 
@@ -277,6 +254,8 @@
 
     [[NSNotificationCenter defaultCenter] removeObserver:self.playerItem];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    [self.thumbnailView clean];
 
     if (self.player) {
         [self.player pause];

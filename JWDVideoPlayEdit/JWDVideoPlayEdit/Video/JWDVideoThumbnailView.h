@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)videoThumbnailViewStartTimer;
 
-- (void)videoThumbnailViewRepeatTimerInvalidate;
+- (void)clean;
 
 @end
 

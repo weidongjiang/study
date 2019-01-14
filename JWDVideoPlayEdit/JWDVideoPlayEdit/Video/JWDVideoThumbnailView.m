@@ -37,6 +37,10 @@
 @property (nonatomic, assign) BOOL            isPanLeftOrRightDraggingView; ///< 是否在移动标签上滑动 yes在
 
 @property (nonatomic, strong) NSTimer         *repeatTimer; ///< <#value#>
+@property (nonatomic, strong) NSTimer         *lineMoveTimer; ///<
+@property (nonatomic, strong) UIView          *movelLineView; ///< <#value#>
+@property (nonatomic, assign) CGFloat         linePositionX; ///< <#value#>
+
 
 @end
 
@@ -90,8 +94,12 @@
     self.rightDragEditView = [[JWDDragEditView alloc] initWithFrame:CGRectMake(K_SCREEN_WIDTH - K_DragEditViewWidth, 0, K_SCREEN_WIDTH, K_thumbnailView_h)];
     self.rightDragEditView.isRight = NO;
     self.rightDragEditView.hitEdgeInsets = UIEdgeInsetsMake(0, -(K_EDGE_EXTENSION_FOR_THUMB), 0, -(K_EDGE_EXTENSION_FOR_THUMB));
-
     [self addSubview:self.rightDragEditView];
+
+
+    self.movelLineView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, 3, K_thumbnailView_h)];
+    self.movelLineView.backgroundColor = [UIColor whiteColor];
+    [self addSubview:self.movelLineView];
 
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveDragEditView:)];
     [self addGestureRecognizer:pan];
@@ -202,6 +210,7 @@
                 if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStartEndTime:)]) {
                     [self.delegate videoThumbnailViewStartEndTime:self.endTime];
                 }
+
             }else if (self.isDraggingLeftOverlayView) {// 移动左边
                 NSLog(@"向左移动");
                 self.isPanLeftOrRightDraggingView = NO;
@@ -237,6 +246,16 @@
             }else {
                 NSLog(@"scrollView---");
                 self.isPanLeftOrRightDraggingView = YES;
+
+                CGFloat deltaX = point.x - self.touchPointX;
+                CGFloat newOffset = self.scrollView.contentOffset.x-deltaX;
+                CGPoint currentOffSet = CGPointMake(newOffset, 0);
+
+                if (currentOffSet.x >= 0 && currentOffSet.x <= (self.scrollView.contentSize.width-K_SCREEN_WIDTH)) {
+                    self.scrollView.contentOffset = CGPointMake(newOffset, 0);
+                    self.touchPointX = point.x;
+                }
+
             }
 
         }
@@ -246,9 +265,7 @@
             if (self.isPanLeftOrRightDraggingView) {
                 return;
             }
-            if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
-                [self.delegate videoThumbnailViewStopOrStartPaly:YES];
-            }
+            [self videoThumbnailViewStartTimer];
         }
             break;
 
@@ -264,40 +281,29 @@
         [self.delegate videoThumbnailViewStopOrStartPaly:NO];
     }
     [self repeatTimerInvalidate];
+
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
-        [self.delegate videoThumbnailViewStopOrStartPaly:YES];
-    }
+
+    [self videoThumbnailViewStartTimer];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
     [self letScrollViewScrollAndResetPlayerStartTime];
-    // 视频暂停时可通过  AVPlayerItem 的API - (void)stepByCount:(NSInteger)stepCount; 滑动，目前未找到step的具体大小 官方文档说的不清楚
-    //    NSInteger step = offsetX/(50.0*self.framesArray.count)*72;
-    //    NSLog(@"移动步数:%ld",step);
-    //    if ([self.playItem canStepForward] && step > 0) {
-    //        [self.playItem stepByCount:step];
-    //    }
-    //
-    //    if ([self.playItem canStepBackward] && step < 0) {
-    //         [self.playItem stepByCount:step];
-    //    }
+
 }
 
 - (void)letScrollViewScrollAndResetPlayerStartTime {
 
     CGFloat offsetX = self.scrollView.contentOffset.x;
-//    CMTime startTime;
 
     if (offsetX >= 0) {
+
         CGFloat duration = self.endTime - self.startTime;
         self.startTime = (offsetX+self.startPointX)/self.IMG_Width;
         self.endTime = self.startTime + duration;
-
-//        startTime = CMTimeMakeWithSeconds((offsetX+self.startPointX)/self.IMG_Width, self.player.currentTime.timescale);
 
         CGFloat startTimeSeconds = (offsetX+self.startPointX)/self.IMG_Width;
         if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewMoveDragEditViewStartTimeSeconds:)]) {
@@ -317,9 +323,6 @@
         [self.delegate videoThumbnailViewStartEndTime:self.endTime];
     }
 
-    // 只有视频播放的时候才能够快进和快退1秒以内
-//    [self.player seekToTime:startTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
-
     if (self.delegate && [self.delegate respondsToSelector:@selector(videoThumbnailViewStopOrStartPaly:)]) {
         [self.delegate videoThumbnailViewStopOrStartPaly:YES];
     }
@@ -329,12 +332,13 @@
 - (void)videoThumbnailViewStartTimer {
 
     [self repeatTimerInvalidate];
+    [self lineMoveTimerInvalidate];
 
     double duarationTime = (self.endPointX-self.startPointX-20)/K_SCREEN_WIDTH*10;
 
-//    line.hidden = NO;
-//    self.linePositionX = self.startPointX+10;
-//    self.lineMoveTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(lineMove) userInfo:nil repeats:YES];
+    self.movelLineView.hidden = NO;
+    self.linePositionX = self.startPointX+10;
+    self.lineMoveTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(lineMove) userInfo:nil repeats:YES];
 
     // 开启循环播放
     self.repeatTimer = [NSTimer scheduledTimerWithTimeInterval:duarationTime target:self selector:@selector(repeatPlay) userInfo:nil repeats:YES];
@@ -348,10 +352,37 @@
     }
 }
 
+- (void)lineMove {
+
+    self.movelLineView.hidden = NO;
+
+    double duarationTime = (self.endPointX-self.startPointX-20)/K_SCREEN_WIDTH*10;
+    self.linePositionX += 0.01*(self.endPointX - self.startPointX-20)/duarationTime;
+
+    if (self.linePositionX >= CGRectGetMinX(self.rightDragEditView.frame)-3) {
+        self.linePositionX = CGRectGetMaxX(self.leftDragEditView.frame)+3;
+    }
+
+    self.movelLineView.frame = CGRectMake(self.linePositionX, 0, 3, 50);
+}
+
 - (void)repeatTimerInvalidate {
     if (self.repeatTimer) {
         [self.repeatTimer invalidate];
         self.repeatTimer = nil;
     }
 }
+
+- (void)lineMoveTimerInvalidate {
+    if (self.lineMoveTimer) {
+        [self.lineMoveTimer invalidate];
+        self.lineMoveTimer = nil;
+    }
+}
+
+- (void)clean {
+    [self repeatTimerInvalidate];
+    [self lineMoveTimerInvalidate];
+}
+
 @end
